@@ -1,5 +1,7 @@
 package br.pucrs.ep.es;
 
+import com.sun.javaws.exceptions.InvalidArgumentException;
+
 import java.nio.file.Paths;
 import java.nio.file.Path;
 import java.nio.file.Files;
@@ -44,9 +46,14 @@ public class CadastroFuncionarios {
                 writer.format("%d;%s;%.1f%n", f.getCodigo(),
                         f.getNome(), f.getSalarioBruto());
         }
+
+
         catch (IOException x) {
             System.err.format("Erro de E/S: %s%n", x);
         }
+
+
+
         return true;
     }
 
@@ -62,6 +69,12 @@ public class CadastroFuncionarios {
                 cad.add(f);
             }
         }
+
+        catch (NumberFormatException x) {
+            System.err.format("formato inválido: %s%n", x);
+            throw x;
+        }
+
         catch (IOException x) {
             System.err.format("Erro de E/S: %s%n", x);
         }
