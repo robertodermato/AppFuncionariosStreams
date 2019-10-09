@@ -20,7 +20,9 @@ public class CadastroFuncionarios {
 
     private CadastroFuncionarios() {
         lista = new ArrayList<>();
-    }
+    }  // construtor é privativo, logo não pode dar new,
+    // com isso só dá pra ter uma instancia da classe.
+    // Esse é o padrão singleton
 
     public static CadastroFuncionarios getInstance() {
         if (cad == null) {
