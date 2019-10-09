@@ -1,0 +1,4 @@
+500;Donald;11000,0
+100;Zezinho;1000,0
+200;Huginho;2000,0
+300;Luizinho;3000,0
