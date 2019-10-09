@@ -8,6 +8,9 @@ public class Funcionario {
 
     public Funcionario(int codigo, String nome, double
             salarioBruto) {
+        if (codigo<300){
+            throw new IllegalArgumentException("Código inválido, meu! " + codigo);
+        }
         this.codigo = codigo;
         this.nome = nome;
         this.salarioBruto = salarioBruto;

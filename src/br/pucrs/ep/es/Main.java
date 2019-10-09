@@ -6,8 +6,8 @@ public class Main {
         CadastroFuncionarios cad;
 
         cad = CadastroFuncionarios.getInstance(); //como é singleton não tem construtor
-
 /*
+
         cad.add(new Funcionario(100,"Zezinho",1000));
 
         cad.add(new Funcionario(200,"Huginho",2000));
@@ -21,8 +21,8 @@ public class Main {
 
         try {
             cad.readFile("funcionariosAula2.txt");
-        } catch (Exception x){
-            System.err.format("Atenção erro na leitura do arquivo, meu!");
+        } catch (IllegalArgumentException x){
+            System.err.format("Atenção erro na leitura do arquivo, meu!" + x);
         }
 
         System.out.println(cad.toString());
